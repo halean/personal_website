@@ -9,16 +9,7 @@
       "hero": "../assets/images/placeholder.svg",
       "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
     },
-    {
-      "id": "paying-to-pick-strawberries",
-      "title": "Paying to Pick Strawberries",
-      "date": "2024-12-22",
-      "author": "You",
-      "summary": "A strawberry‑picking outing reveals a shift from survival to ordinary joy, plus a private aside about ‘expansive’ green eyes.",
-      "hero": "../assets/images/placeholder.svg",
-      "contentUrl": "content/paying-to-pick-strawberries.md",
-      "tags": ["Sayfullah", "migration", "reflection"]
-    },
+    
     {
       "id": "nativity-play-mohamed-shahela",
       "title": "A Nativity Play — Mohamed and Shahela",
@@ -80,16 +71,7 @@
       "contentUrl": "content/di-ruoc-dau-o-my-tho.md",
       "tags": ["hồi ký", "Mỹ Tho"]
     },
-    {
-      "id": "bangkok-2015",
-      "title": "Bangkok 2015 — Health Check and a Night Out",
-      "date": "2015-08-17",
-      "author": "You",
-      "summary": "A family health-check trip that turned surreal on the night of the Bangkok bombing.",
-      "hero": "../assets/images/placeholder.svg",
-      "contentUrl": "content/bangkok-2015.md",
-      "tags": ["Bangkok", "travel", "family"]
-    },
+    
     {
       "id": "mua-ngoc-o-chanthaburi",
       "title": "Mua ngọc ở Chanthaburi",
