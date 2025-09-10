@@ -10,6 +10,17 @@
       "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
     },
     {
+      "id": "chuyen-chep-o-hy-lap",
+      "title": "Chuyện chép ở Hy Lạp",
+      "date": "2025-01-23",
+      "author": "You",
+      "summary": "Ký ức Kefalonia: salad Hy Lạp đầu tiên, olive Kalamata và một chiều bên hồ bơi.",
+      "hero": "../assets/images/IMG_3443.JPEG",
+      "hero2": "../assets/images/IMG_2507.JPEG",
+      "contentUrl": "content/chuyen-chep-o-hy-lap.md",
+      "tags": ["Hy Lạp", "du ký", "ẩm thực"]
+    },
+    {
       "id": "yeu-ghet-con-doc-dong-ho-va-ai",
       "title": "Yêu ghét con dốc, đồng hồ và AI",
       "date": "2025-03-27",
