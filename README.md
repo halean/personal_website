@@ -26,6 +26,8 @@ For JSON-driven pages (Blogs, Images & Videos), use a local web server so `fetch
 3. In the repo Settings → Pages, set "Build and deployment" Source to "GitHub Actions".
 4. Push/merge to `main` (or run the workflow manually). The Pages Action uploads `site/` and publishes it.
 
+Note: `.nojekyll` is present in `site/` to disable Jekyll processing on GitHub Pages so Markdown files (e.g., `blogs/content/*.md`) are served as static files for the client-side renderer.
+
 ## Customization
 
 - Update colors, spacing, or layout in `site/assets/css/styles.css`.
