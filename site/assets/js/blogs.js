@@ -255,7 +255,7 @@
     const postRoot = document.getElementById('blog-post');
     if (!listRoot && !postRoot) return;
 
-    const src = (listRoot || postRoot).getAttribute('data-src') || '../data/blogs.json';
+    const src = (listRoot || postRoot).getAttribute('data-src') || '. ./data/blogs.json';
     try {
       const data = await loadJSON(src);
       const posts = Array.isArray(data.posts) ? data.posts : [];
