@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "hello-world",
+      "title": "Hello World: First Post",
+      "date": "2025-01-01",
+      "author": "You",
+      "summary": "Starting the journey with a short introduction and goals.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/hello-world.html",
+      "tags": ["intro", "site"]
+    },
+    {
+      "id": "design-notes",
+      "title": "Design Notes",
+      "date": "2025-01-02",
+      "author": "You",
+      "summary": "Thoughts on BBC‑style, responsive layout decisions.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/design-notes.md",
+      "tags": ["design", "layout"]
+    },
+    {
+      "id": "roadmap",
+      "title": "Roadmap",
+      "date": "2025-01-03",
+      "author": "You",
+      "summary": "What’s next: theming, content, and performance tweaks.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/roadmap.md",
+      "tags": ["planning"]
+    }
+  ]
+}

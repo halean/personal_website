@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blogs • MySite</title>
-    <meta name="description" content="Blog index for MySite." />
+    <title>Blog Post • MySite</title>
+    <meta name="description" content="Blog post" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
@@ -24,24 +24,11 @@
     </header>
 
     <main class="container">
-      <div class="section-head">
-        <h2>Blogs</h2>
-      </div>
-      <div id="blog-list" data-src="../data/blogs.json">
+      <article id="blog-post" class="article" data-src="../data/blogs.json">
         <noscript>
-          <div class="card-grid">
-            <article class="card">
-              <a href="hello-world.html" class="media">
-                <img src="../assets/images/placeholder.svg" alt="Hello World cover" />
-              </a>
-              <div class="content">
-                <h3><a href="hello-world.html">Hello World: First Post</a></h3>
-                <p>Intro, goals, and what to expect here.</p>
-              </div>
-            </article>
-          </div>
+          <p>Please enable JavaScript to view this post.</p>
         </noscript>
-      </div>
+      </article>
     </main>
 
     <footer class="site-footer">
@@ -51,6 +38,7 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/markdown.js"></script>
     <script src="../assets/js/blogs.js"></script>
   </body>
   </html>

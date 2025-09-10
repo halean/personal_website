@@ -14,7 +14,10 @@ Static, responsive personal site with three sections: Blogs, Images & Videos, an
 
 ## Local Preview
 
-Open `site/index.html` in a browser. No build step required.
+For JSON-driven pages (Blogs, Images & Videos), use a local web server so `fetch()` can load JSON files:
+
+- Python: `cd site && python3 -m http.server 5173` then open `http://localhost:5173/`
+- Node: `npx serve site` or any static server
 
 ## Deploying to GitHub Pages
 
@@ -28,6 +31,7 @@ Open `site/index.html` in a browser. No build step required.
 - Update colors, spacing, or layout in `site/assets/css/styles.css`.
 - Replace placeholder images with real assets in `site/assets/images/`.
 - Add posts/pages by copying existing files and updating links.
+  - Or edit JSON files to add entries (see below).
 
 ## JSON-driven content
 
@@ -51,3 +55,34 @@ Example entry in `media.json`:
 ```
 
 If you like this approach, we can migrate `blogs/` and `demos/` similarly to load from JSON.
+
+### Blogs via JSON
+
+- Data: `site/data/blogs.json` with an array `posts` containing `{ id, title, date, author, summary, hero, contentUrl | content }`.
+- List page: `site/blogs/index.html` renders from JSON with `site/assets/js/blogs.js`.
+- Post page: `site/blogs/post.html?id=<postId>` loads the matching item and fetches its `contentUrl`.
+- Supported content types:
+  - HTML (`.html`): inserted as-is.
+  - Markdown (`.md`/`.markdown`): rendered client-side by `site/assets/js/markdown.js`.
+  - Plain text (`.txt`): displayed in a `<pre>` block.
+- Examples:
+  - HTML: `site/blogs/content/hello-world.html`
+  - Markdown: `site/blogs/content/design-notes.md`, `site/blogs/content/roadmap.md`
+
+#### Optional frontmatter in Markdown
+
+You can include YAML-like frontmatter at the top of a Markdown file. The post page prefers frontmatter fields when present:
+
+```
+---
+title: Design Notes
+date: 2025-01-02
+author: You
+tags: [design, layout]
+summary: Thoughts on BBC‑style responsive layout.
+---
+```
+
+The Blogs index still uses `site/data/blogs.json` for fast listing and sorting; frontmatter is used on the single post page.
+
+Tip: Keep `contentUrl` paths relative to the blogs directory (e.g., `content/hello-world.html`).
