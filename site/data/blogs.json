@@ -10,6 +10,26 @@
       "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
     },
     {
+      "id": "nativity-play-mohamed-shahela",
+      "title": "A Nativity Play — Mohamed and Shahela",
+      "date": "2024-12-24",
+      "author": "You",
+      "summary": "At a primary‑school nativity, Mohamed and Shahela play Joseph and Mary—an ordinary, universal moment that quietly contradicts the headlines.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/nativity-play-mohamed-shahela.md",
+      "tags": ["school", "nativity", "diversity", "reflection"]
+    },
+    {
+      "id": "an-acceptable-absurdity",
+      "title": "An Acceptable Absurdity",
+      "date": "2025-01-31",
+      "author": "You",
+      "summary": "A cold parking-lot tableau—shoplifter, hesitant guards, and a city’s quiet calculus—about rules and their limits.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/an-acceptable-absurdity.md",
+      "tags": ["observation", "society", "reflection"]
+    },
+    {
       "id": "your-baby-is-beautiful",
       "title": "Your Baby Is Beautiful",
       "date": "2025-01-27",
