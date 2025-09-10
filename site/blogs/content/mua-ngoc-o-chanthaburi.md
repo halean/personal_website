@@ -4,7 +4,8 @@ date: 2018-03-15
 author: You
 tags: [Chanthaburi, đá quý, trải nghiệm]
 summary: Đổi gió sang Thái, nhập môn sàn đá quý Chanthaburi và chứng kiến một thương vụ lục bảo kinh điển.
-hero: ../assets/images/placeholder.svg
+hero: ../assets/images/chanthaburi-skyline.jpg
+hero2: ../assets/images/chanthaburi-gems.jpg
 ---
 
 # Mua ngọc ở Chanthaburi
@@ -57,4 +58,3 @@ Tôi cảm thấy tự tin hơn, nếu cần, tôi cũng sẽ mua ngọc như an
 [1] Ruby đôi khi cần được nung để loại bỏ ánh sao hoặc tơ; điều chỉnh màu; hoặc sửa khuyết điểm.
 
 [2] Trung gian bên mua chỉ có một nhiệm vụ: mua cặp lục bảo; bên bán có thể bán thêm nhiều món khác.
-

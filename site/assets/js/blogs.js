@@ -165,6 +165,7 @@
       author: post.author || '',
       date: post.date || '',
       hero: post.hero || '',
+      hero2: post.hero2 || '',
       summary: post.summary || '',
       summaryHtml: '',
       tags: Array.isArray(post.tags) ? post.tags : []
@@ -182,6 +183,7 @@
           if (meta.author) display.author = meta.author;
           if (meta.date) display.date = meta.date;
           if (meta.hero) display.hero = meta.hero;
+          if (meta.hero2) display.hero2 = meta.hero2;
           if (meta.tags) display.tags = Array.isArray(meta.tags) ? meta.tags : String(meta.tags).split(',').map(s => s.trim()).filter(Boolean);
           if (meta.summary) display.summary = meta.summary;
           // Extract summary section for hero if present (support 'Tóm tắt' or 'Summary')
@@ -241,8 +243,19 @@
     hero.appendChild(textCol);
 
     // Always render media column with a fallback image for consistent layout
-    const heroSrc = display.hero || '../assets/images/placeholder.svg';
-    hero.appendChild(el('div', { class: 'post-hero-media' }, el('img', { src: heroSrc, alt: display.title || 'Post image' })));
+    const heroMedia = el('div', { class: 'post-hero-media' });
+    if (display.hero2) {
+      const grid = el('div', { class: 'multi-hero' });
+      const src1 = display.hero || '../assets/images/placeholder.svg';
+      const src2 = display.hero2 || '../assets/images/placeholder.svg';
+      grid.appendChild(el('img', { src: src1, alt: (display.title || 'Post image') + ' (left)' }));
+      grid.appendChild(el('img', { src: src2, alt: (display.title || 'Post image') + ' (right)' }));
+      heroMedia.appendChild(grid);
+    } else {
+      const heroSrc = display.hero || '../assets/images/placeholder.svg';
+      heroMedia.appendChild(el('img', { src: heroSrc, alt: display.title || 'Post image' }));
+    }
+    hero.appendChild(heroMedia);
     container.appendChild(hero);
 
     const body = el('div');
