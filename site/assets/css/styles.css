@@ -172,6 +172,11 @@ a:hover { text-decoration: underline; }
   .post-hero { grid-template-columns: 1fr 2fr; align-items: center; }
 }
 
+/* Embeds */
+.embed-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius); overflow: hidden; border: 1px solid #e6e6e6; }
+.embed-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #111; }
+.embed-note { color: var(--muted); font-size: .95rem; margin-top: 8px; }
+
 /* Utilities */
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;

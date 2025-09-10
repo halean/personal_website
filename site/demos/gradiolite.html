@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gradiolite Demo • MySite Demos</title>
+    <meta name="description" content="Embedded demo of gradiolite_page." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="../">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="../blogs/">Blogs</a>
+        <a href="../images-videos/">Images &amp; Videos</a>
+        <a href="./">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article class="article">
+        <h1>Gradiolite Demo</h1>
+        <p class="meta">Embedded from <a href="https://halean.github.io/gradiolite_page/" rel="noopener" target="_blank">halean.github.io/gradiolite_page</a></p>
+
+        <div class="embed-container">
+          <iframe
+            class="embed-frame"
+            src="https://halean.github.io/gradiolite_page/"
+            title="Gradiolite Demo"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          ></iframe>
+        </div>
+        <p class="embed-note">If the embed fails to load (site disallows framing), open it directly: <a href="https://halean.github.io/gradiolite_page/" rel="noopener" target="_blank">Open Gradiolite in a new tab</a>.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
+
