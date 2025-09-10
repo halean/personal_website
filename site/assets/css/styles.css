@@ -156,8 +156,23 @@ a:hover { text-decoration: underline; }
 .meta { color: var(--muted); font-size: .95rem; margin-bottom: 8px; }
 .article img, .article video { max-width: 100%; height: auto; border-radius: var(--radius); }
 
+/* Post hero layout */
+.post-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.post-hero-text .summary { color: var(--muted); margin: 6px 0 8px; }
+.post-hero-text .summary h2 { font-size: 1.05rem; margin: 0 0 6px; color: var(--text); }
+.post-hero-text .summary ul { margin: 0; padding-left: 18px; }
+.post-hero-media img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+
+@media (min-width: 900px) {
+  .post-hero { grid-template-columns: 1fr 2fr; align-items: center; }
+}
+
 /* Utilities */
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
 }
-

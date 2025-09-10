@@ -15,6 +15,68 @@
     return node;
   }
 
+  function extractSection(mdText, title) {
+    if (!mdText) return '';
+    const lines = String(mdText).replace(/\r\n?/g, '\n').split('\n');
+    const headingRe = /^#{1,6}\s+(.+?)\s*$/;
+    let start = -1;
+    let level = 0;
+    const wanted = String(title).trim().toLowerCase();
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(headingRe);
+      if (m) {
+        const text = m[1].trim().toLowerCase();
+        if (text === wanted && /^##/.test(lines[i])) { // prefer level 2
+          start = i + 1;
+          level = lines[i].match(/^#+/)[0].length;
+          break;
+        }
+      }
+    }
+    if (start === -1) return '';
+    let end = lines.length;
+    for (let i = start; i < lines.length; i++) {
+      const m = lines[i].match(headingRe);
+      if (m) {
+        const lvl = lines[i].match(/^#+/)[0].length;
+        if (lvl <= level) { end = i; break; }
+      }
+    }
+    const section = lines.slice(start, end).join('\n').trim();
+    return section;
+  }
+
+  function removeSection(mdText, title) {
+    if (!mdText) return mdText;
+    const lines = String(mdText).replace(/\r\n?/g, '\n').split('\n');
+    const headingRe = /^#{1,6}\s+(.+?)\s*$/;
+    const wanted = String(title).trim().toLowerCase();
+    let start = -1;
+    let level = 0;
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(headingRe);
+      if (m) {
+        const text = m[1].trim().toLowerCase();
+        if (text === wanted && /^##/.test(lines[i])) { // only remove level 2 section
+          start = i;
+          level = lines[i].match(/^#+/)[0].length;
+          break;
+        }
+      }
+    }
+    if (start === -1) return mdText;
+    let end = lines.length;
+    for (let i = start + 1; i < lines.length; i++) {
+      const m = lines[i].match(headingRe);
+      if (m) {
+        const lvl = lines[i].match(/^#+/)[0].length;
+        if (lvl <= level) { end = i; break; }
+      }
+    }
+    const removed = lines.slice(0, start).concat(lines.slice(end)).join('\n');
+    return removed;
+  }
+
   function parseFrontmatter(text) {
     const result = { meta: {}, content: text };
     if (!/^---\s*[\r\n]/.test(text)) return result;
@@ -103,6 +165,8 @@
       author: post.author || '',
       date: post.date || '',
       hero: post.hero || '',
+      summary: post.summary || '',
+      summaryHtml: '',
       tags: Array.isArray(post.tags) ? post.tags : []
     };
 
@@ -119,7 +183,26 @@
           if (meta.date) display.date = meta.date;
           if (meta.hero) display.hero = meta.hero;
           if (meta.tags) display.tags = Array.isArray(meta.tags) ? meta.tags : String(meta.tags).split(',').map(s => s.trim()).filter(Boolean);
-          const html = (window.Markdown && typeof window.Markdown.toHtml === 'function') ? window.Markdown.toHtml(content) : `<pre>${content}</pre>`;
+          if (meta.summary) display.summary = meta.summary;
+          // Extract summary section for hero if present (support 'Tóm tắt' or 'Summary')
+          let summaryMd = extractSection(content, 'Tóm tắt');
+          if (!summaryMd) summaryMd = extractSection(content, 'Summary');
+          // Prepare body content
+          let mdBody = content;
+          if (summaryMd && window.Markdown && typeof window.Markdown.toHtml === 'function') {
+            // Preserve original heading label by prepending a level-2 heading
+            // Prefer '## Tóm tắt' if found, otherwise '## Summary'
+            const heading = extractSection(content, 'Tóm tắt') ? '## Tóm tắt' : '## Summary';
+            display.summaryHtml = window.Markdown.toHtml(heading + '\n\n' + summaryMd);
+            // Remove the summary section from the body to avoid duplication
+            mdBody = removeSection(mdBody, 'Tóm tắt');
+            mdBody = removeSection(mdBody, 'Summary');
+          }
+          // Remove leading H1 from markdown body if we already render title in hero
+          if (/^\s*#\s+/.test(mdBody)) {
+            mdBody = mdBody.replace(/^\s*#\s+.*\n+/, '');
+          }
+          const html = (window.Markdown && typeof window.Markdown.toHtml === 'function') ? window.Markdown.toHtml(mdBody) : `<pre>${mdBody}</pre>`;
           contentHtml = html;
         } else if (lower.endsWith('.html') || lower.endsWith('.htm')) {
           contentHtml = await loadText(post.contentUrl, 'text/html');
@@ -139,20 +222,28 @@
       contentHtml = '<p>Failed to load post content.</p>';
     }
 
-    // Update title
+    // Update document title
     if (display.title) document.title = display.title + ' • MySite';
 
-    const header = el('header');
-    header.appendChild(el('h1', { text: display.title || 'Untitled' }));
+    // Post hero section: title + summary (1fr) | image (2fr)
+    const hero = el('div', { class: 'post-hero' });
+    const textCol = el('div', { class: 'post-hero-text' });
+    textCol.appendChild(el('h1', { text: display.title || 'Untitled' }));
+    if (display.summaryHtml) {
+      textCol.appendChild(el('div', { class: 'summary', html: display.summaryHtml }));
+    } else if (display.summary) {
+      textCol.appendChild(el('p', { class: 'summary', text: display.summary }));
+    }
     const metaPieces = [];
     if (display.author) metaPieces.push(display.author);
     if (display.date) metaPieces.push(formatDate(display.date));
-    if (metaPieces.length) header.appendChild(el('p', { class: 'meta', text: metaPieces.join(' • ') }));
-    container.appendChild(header);
+    if (metaPieces.length) textCol.appendChild(el('p', { class: 'meta', text: metaPieces.join(' • ') }));
+    hero.appendChild(textCol);
 
-    if (display.hero) {
-      container.appendChild(el('img', { src: display.hero, alt: display.title || 'Post image' }));
-    }
+    // Always render media column with a fallback image for consistent layout
+    const heroSrc = display.hero || '../assets/images/placeholder.svg';
+    hero.appendChild(el('div', { class: 'post-hero-media' }, el('img', { src: heroSrc, alt: display.title || 'Post image' })));
+    container.appendChild(hero);
 
     const body = el('div');
     body.innerHTML = contentHtml;

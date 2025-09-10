@@ -1,34 +1,35 @@
 {
   "posts": [
     {
-      "id": "hello-world",
-      "title": "Hello World: First Post",
-      "date": "2025-01-01",
+      "id": "bangkok-2015",
+      "title": "Bangkok 2015 — Health Check and a Night Out",
+      "date": "2015-08-17",
       "author": "You",
-      "summary": "Starting the journey with a short introduction and goals.",
+      "summary": "A family health-check trip that turned surreal on the night of the Bangkok bombing.",
       "hero": "../assets/images/placeholder.svg",
-      "contentUrl": "content/hello-world.html",
-      "tags": ["intro", "site"]
+      "contentUrl": "content/bangkok-2015.md",
+      "tags": ["Bangkok", "travel", "family"]
     },
     {
-      "id": "design-notes",
-      "title": "Design Notes",
-      "date": "2025-01-02",
+      "id": "mua-ngoc-o-chanthaburi",
+      "title": "Mua ngọc ở Chanthaburi",
+      "date": "2018-03-15",
       "author": "You",
-      "summary": "Thoughts on BBC‑style, responsive layout decisions.",
+      "summary": "Đổi gió sang Thái, nhập môn sàn đá quý Chanthaburi và chứng kiến một thương vụ lục bảo kinh điển.",
       "hero": "../assets/images/placeholder.svg",
-      "contentUrl": "content/design-notes.md",
-      "tags": ["design", "layout"]
+      "contentUrl": "content/mua-ngoc-o-chanthaburi.md",
+      "tags": ["Chanthaburi", "đá quý", "trải nghiệm"]
     },
     {
-      "id": "roadmap",
-      "title": "Roadmap",
-      "date": "2025-01-03",
+      "id": "mua-dat-o-nam-ban",
+      "title": "Mua đất ở Nam Ban",
+      "date": "2019-06-01",
       "author": "You",
-      "summary": "What’s next: theming, content, and performance tweaks.",
-      "hero": "../assets/images/placeholder.svg",
-      "contentUrl": "content/roadmap.md",
-      "tags": ["planning"]
+      "summary": "Một chuyến đi Nam Ban mùa hè 2019 và hành trình mua mảnh đất bên suối.",
+      "hero": "../assets/images/IMG_0186.JPEG",
+      "contentUrl": "content/mua-dat-o-nam-ban.md",
+      "tags": ["hồi ký", "Nam Ban"]
     }
+    
   ]
 }

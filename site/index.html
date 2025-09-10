@@ -44,34 +44,20 @@
           <h2>Latest Blogs</h2>
           <a class="view-all" href="blogs/">View all</a>
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <a href="blogs/post.html?id=hello-world" class="media">
-              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
-            </a>
-            <div class="content">
-              <h3><a href="blogs/post.html?id=hello-world">Hello World: First Post</a></h3>
-              <p>Starting the journey with a short introduction and goals.</p>
+        <div id="home-blogs" data-src="data/blogs.json">
+          <noscript>
+            <div class="card-grid">
+              <article class="card">
+                <a href="blogs/" class="media">
+                  <img src="assets/images/placeholder.svg" alt="Blog artwork" />
+                </a>
+                <div class="content">
+                  <h3><a href="blogs/">Visit the blog</a></h3>
+                  <p>Enable JavaScript to see the latest posts here.</p>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="card">
-            <a href="blogs/post.html?id=design-notes" class="media">
-              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
-            </a>
-            <div class="content">
-              <h3><a href="blogs/post.html?id=design-notes">Design Notes</a></h3>
-              <p>Thoughts on building a BBC‑style, responsive layout.</p>
-            </div>
-          </article>
-          <article class="card">
-            <a href="blogs/post.html?id=roadmap" class="media">
-              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
-            </a>
-            <div class="content">
-              <h3><a href="blogs/post.html?id=roadmap">Roadmap</a></h3>
-              <p>What’s next: theming, content, and performance tweaks.</p>
-            </div>
-          </article>
+          </noscript>
         </div>
       </section>
 
@@ -137,5 +123,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
   </body>
   </html>
