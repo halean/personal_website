@@ -10,6 +10,16 @@
       "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
     },
     {
+      "id": "your-baby-is-beautiful",
+      "title": "Your Baby Is Beautiful",
+      "date": "2025-01-27",
+      "author": "You",
+      "summary": "A lift compliment becomes a small victory over overanalysis—and opens space for affection.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/your-baby-is-beautiful.md",
+      "tags": ["encounter", "reflection"]
+    },
+    {
       "id": "chuyen-chep-o-hy-lap",
       "title": "Chuyện chép ở Hy Lạp",
       "date": "2025-01-23",
