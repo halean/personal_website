@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Images & Videos • MySite</title>
+    <meta name="description" content="Media gallery for MySite." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="../">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="../blogs/">Blogs</a>
+        <a href="./">Images &amp; Videos</a>
+        <a href="../demos/">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h2>Images &amp; Videos</h2>
+      </div>
+
+      <div id="media-list" data-src="../data/media.json">
+        <noscript>
+          <div class="article" id="sample-image">
+            <h3>Sample Image</h3>
+            <p class="meta">Local SVG placeholder</p>
+            <img src="../assets/images/placeholder.svg" alt="Abstract placeholder" />
+            <p>This image demonstrates the media layout and scaling behavior on different screen sizes.</p>
+          </div>
+          <div class="article" id="sample-video">
+            <h3>Sample Video</h3>
+            <p class="meta">HTML5 video using a CC0 clip</p>
+            <video controls preload="metadata" poster="../assets/images/placeholder.svg">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p>Embedding a small sample video. Replace with your own files or use YouTube/Vimeo embeds.</p>
+          </div>
+        </noscript>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+  </html>

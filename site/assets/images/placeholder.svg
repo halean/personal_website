@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Placeholder image">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151515"/>
+      <stop offset="1" stop-color="#2a2a2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="12" ry="12" fill="#111" stroke="#333"/>
+  <g fill="#bb1919">
+    <rect x="80" y="520" width="200" height="16" rx="8"/>
+  </g>
+  <g fill="#eee">
+    <rect x="80" y="90" width="560" height="36" rx="6"/>
+    <rect x="80" y="140" width="800" height="18" rx="6" opacity=".6"/>
+    <rect x="80" y="168" width="760" height="18" rx="6" opacity=".45"/>
+    <rect x="80" y="196" width="600" height="18" rx="6" opacity=".3"/>
+  </g>
+  <g fill="#444">
+    <rect x="80" y="260" width="300" height="180" rx="10"/>
+    <rect x="400" y="260" width="300" height="180" rx="10"/>
+    <rect x="720" y="260" width="300" height="180" rx="10"/>
+  </g>
+  <text x="1120" y="600" fill="#888" font-size="20" text-anchor="end" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">Placeholder</text>
+  <title>Placeholder graphic</title>
+  <desc>Neutral image used as a placeholder for cards and hero media.</desc>
+  Sorry, your browser does not support inline SVG.
+</svg>
+

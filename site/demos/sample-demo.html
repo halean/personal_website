@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Counter • MySite Demos</title>
+    <meta name="description" content="A minimal interactive counter demo." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <style>
+      .counter { display: flex; align-items: center; gap: 10px; }
+      .counter .value { font-size: 2rem; min-width: 3ch; text-align: center; }
+      .counter button { padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="../">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="../blogs/">Blogs</a>
+        <a href="../images-videos/">Images &amp; Videos</a>
+        <a href="./">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article class="article">
+        <h1>Interactive Counter</h1>
+        <p class="meta">Tiny demo using vanilla JS</p>
+        <div class="counter" role="group" aria-label="Counter controls">
+          <button id="dec" aria-label="Decrement">−</button>
+          <span id="value" class="value" aria-live="polite">0</span>
+          <button id="inc" aria-label="Increment">+</button>
+          <button id="reset" aria-label="Reset">Reset</button>
+        </div>
+        <p>This shows basic state management and event handling without any frameworks.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+      (function(){
+        let value = 0;
+        const $value = document.getElementById('value');
+        const $inc = document.getElementById('inc');
+        const $dec = document.getElementById('dec');
+        const $reset = document.getElementById('reset');
+        function render(){ $value.textContent = String(value); }
+        $inc.addEventListener('click', () => { value += 1; render(); });
+        $dec.addEventListener('click', () => { value -= 1; render(); });
+        $reset.addEventListener('click', () => { value = 0; render(); });
+        render();
+      })();
+    </script>
+  </body>
+  </html>
+

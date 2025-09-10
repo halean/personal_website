@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demos • MySite</title>
+    <meta name="description" content="Interactive demos and experiments." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="../">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="../blogs/">Blogs</a>
+        <a href="../images-videos/">Images &amp; Videos</a>
+        <a href="./">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h2>Demos</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <a href="sample-demo.html" class="media">
+            <img src="../assets/images/placeholder.svg" alt="Counter demo thumbnail" />
+          </a>
+          <div class="content">
+            <h3><a href="sample-demo.html">Interactive Counter</a></h3>
+            <p>A tiny JS demo with increment/decrement and reset.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a href="#" class="media">
+            <img src="../assets/images/placeholder.svg" alt="Demo placeholder" />
+          </a>
+          <div class="content">
+            <h3><a href="#">Future Demo (stub)</a></h3>
+            <p>Space for experiments and visualizations.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
+

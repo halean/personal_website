@@ -1,0 +1,22 @@
+{
+  "images": [
+    {
+      "id": "sample-image",
+      "title": "Sample Image",
+      "src": "../assets/images/placeholder.svg",
+      "alt": "Abstract placeholder",
+      "description": "A local SVG placeholder demonstrates gallery layout."
+    }
+  ],
+  "videos": [
+    {
+      "id": "sample-video",
+      "title": "Sample Video",
+      "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "type": "video/mp4",
+      "poster": "../assets/images/placeholder.svg",
+      "description": "Embedded HTML5 video using a CC0 sample clip."
+    }
+  ]
+}
+

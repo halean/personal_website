@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blogs • MySite</title>
+    <meta name="description" content="Blog index for MySite." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="../">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="./">Blogs</a>
+        <a href="../images-videos/">Images &amp; Videos</a>
+        <a href="../demos/">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h2>Blogs</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <a href="hello-world.html" class="media">
+            <img src="../assets/images/placeholder.svg" alt="Hello World cover" />
+          </a>
+          <div class="content">
+            <h3><a href="hello-world.html">Hello World: First Post</a></h3>
+            <p>Intro, goals, and what to expect here.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a href="#" class="media">
+            <img src="../assets/images/placeholder.svg" alt="Design notes" />
+          </a>
+          <div class="content">
+            <h3><a href="#">Design Notes (stub)</a></h3>
+            <p>BBC‑style layout decisions and tradeoffs.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a href="#" class="media">
+            <img src="../assets/images/placeholder.svg" alt="Roadmap" />
+          </a>
+          <div class="content">
+            <h3><a href="#">Roadmap (stub)</a></h3>
+            <p>Themes, more posts, and performance work.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
+

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My BBC‑style Personal Site</title>
+    <meta name="description" content="A minimal, BBC-inspired personal site with Blogs, Media, and Demos." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='56' text-anchor='middle' fill='%23fff' font-family='system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji'%3EMS%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar container">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <a class="brand" href="./">MySite</a>
+        <form class="search" role="search" aria-label="Site search" onsubmit="return false;">
+          <input type="search" placeholder="Search (coming soon)" aria-label="Search" />
+        </form>
+      </div>
+      <nav class="main-nav container" aria-label="Primary">
+        <a href="blogs/">Blogs</a>
+        <a href="images-videos/">Images &amp; Videos</a>
+        <a href="demos/">Demos</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Welcome to my BBC‑inspired site</h1>
+          <p>Clean, responsive layout with quick access to Blogs, Media, and Demos.</p>
+          <div class="cta-row">
+            <a class="btn" href="blogs/">Explore Blogs</a>
+            <a class="btn secondary" href="images-videos/">View Media</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/placeholder.svg" alt="Decorative placeholder" />
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="section-head">
+          <h2>Latest Blogs</h2>
+          <a class="view-all" href="blogs/">View all</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <a href="blogs/hello-world.html" class="media">
+              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
+            </a>
+            <div class="content">
+              <h3><a href="blogs/hello-world.html">Hello World: First Post</a></h3>
+              <p>Starting the journey with a short introduction and goals.</p>
+            </div>
+          </article>
+          <article class="card">
+            <a href="blogs/" class="media">
+              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
+            </a>
+            <div class="content">
+              <h3><a href="blogs/">Design Notes</a></h3>
+              <p>Thoughts on building a BBC‑style, responsive layout.</p>
+            </div>
+          </article>
+          <article class="card">
+            <a href="blogs/" class="media">
+              <img src="assets/images/placeholder.svg" alt="Blog artwork" />
+            </a>
+            <div class="content">
+              <h3><a href="blogs/">Roadmap</a></h3>
+              <p>What’s next: theming, content, and performance tweaks.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="section-head">
+          <h2>Images &amp; Videos</h2>
+          <a class="view-all" href="images-videos/">View all</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <a href="images-videos/#sample-image" class="media">
+              <img src="assets/images/placeholder.svg" alt="Abstract placeholder" />
+            </a>
+            <div class="content">
+              <h3><a href="images-videos/#sample-image">Sample Image</a></h3>
+              <p>A local SVG placeholder demonstrates gallery layout.</p>
+            </div>
+          </article>
+          <article class="card">
+            <a href="images-videos/#sample-video" class="media">
+              <img src="assets/images/placeholder.svg" alt="Video placeholder" />
+            </a>
+            <div class="content">
+              <h3><a href="images-videos/#sample-video">Sample Video</a></h3>
+              <p>Embedded HTML5 video using a CC0 sample clip.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="section-head">
+          <h2>Demos</h2>
+          <a class="view-all" href="demos/">View all</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <a href="demos/sample-demo.html" class="media">
+              <img src="assets/images/placeholder.svg" alt="Demo thumbnail" />
+            </a>
+            <div class="content">
+              <h3><a href="demos/sample-demo.html">Interactive Counter</a></h3>
+              <p>A tiny JavaScript demo showing state and events.</p>
+            </div>
+          </article>
+          <article class="card">
+            <a href="demos/" class="media">
+              <img src="assets/images/placeholder.svg" alt="Demo thumbnail" />
+            </a>
+            <div class="content">
+              <h3><a href="demos/">More Coming Soon</a></h3>
+              <p>Space for future experiments and interactive ideas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> MySite • Built for GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>
+
