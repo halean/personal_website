@@ -1,6 +1,35 @@
 {
   "posts": [
     {
+      "id": "lam-to-vay-nuoc-tinh-toan-suy-tu",
+      "title": "Làm tổ, vẫy nước, tính toán, suy tư: khác nhau chỗ nào?",
+      "date": "2025-09-10",
+      "author": "You",
+      "summary": "(Chim làm tổ, Vịt giao tiếp, AI phản ứng)",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
+    },
+    {
+      "id": "yeu-ghet-con-doc-dong-ho-va-ai",
+      "title": "Yêu ghét con dốc, đồng hồ và AI",
+      "date": "2025-03-27",
+      "author": "You",
+      "summary": "Một buổi chạy dốc và đối thoại với đồng hồ/AI: từ giận dữ tới khoan dung và ‘lời tiên tri tự thành’.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/yeu-ghet-con-doc-dong-ho-va-ai.md",
+      "tags": ["chạy bộ", "công nghệ", "suy ngẫm"]
+    },
+    {
+      "id": "di-ruoc-dau-o-my-tho",
+      "title": "Đi rước dâu ở Mỹ Tho",
+      "date": "2025-02-22",
+      "author": "You",
+      "summary": "Chuyến đi rước dâu năm 1999 ở Mỹ Tho và những câu chuyện trước–sau lễ cưới.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/di-ruoc-dau-o-my-tho.md",
+      "tags": ["hồi ký", "Mỹ Tho"]
+    },
+    {
       "id": "bangkok-2015",
       "title": "Bangkok 2015 — Health Check and a Night Out",
       "date": "2015-08-17",
