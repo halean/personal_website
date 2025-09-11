@@ -4,7 +4,7 @@ date: 2025-03-27
 author: You
 tags: [chạy bộ, công nghệ, suy ngẫm]
 summary: Một buổi chạy dốc và đối thoại với đồng hồ/AI: từ giận dữ tới khoan dung và “lời tiên tri tự trở thành hiện thực”.
-hero: ../assets/images/placeholder.svg
+hero: ../assets/images/IMG_1321.PNG
 ---
 
 # Yêu ghét con dốc, đồng hồ và AI

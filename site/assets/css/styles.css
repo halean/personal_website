@@ -96,7 +96,7 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius);
 }
 .btn.secondary { background: #333; }
-.hero-media img { width: 100%; height: auto; border-radius: var(--radius); }
+.hero-media img, .hero-media video { width: 100%; height: auto; border-radius: var(--radius); display: block; }
 
 @media (min-width: 900px) {
   .hero { grid-template-columns: 1.2fr 1fr; align-items: center; }
