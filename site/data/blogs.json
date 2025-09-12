@@ -9,6 +9,16 @@
       "hero": "../assets/images/placeholder.svg",
       "contentUrl": "content/lam-to-vay-nuoc-tinh-toan-suy-tu.md"
     },
+    {
+      "id": "vung-tau-co-gi-vui",
+      "title": "Vũng Tàu có gì vui?",
+      "date": "2025-04-22",
+      "author": "You",
+      "summary": "Những lát cắt Vũng Tàu và Hồ Tràm từ 1984 đến 2019—từ biển vắng, hộp đêm và những đêm đua xe, tới những chuyến đi gia đình và sự tĩnh lặng của Hồ Tràm.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/vung-tau-co-gi-vui.md",
+      "tags": ["Vũng Tàu", "Hồ Tràm", "hồi ký"]
+    },
     
     {
       "id": "nativity-play-mohamed-shahela",
