@@ -51,6 +51,26 @@
       "tags": ["encounter", "reflection"]
     },
     {
+      "id": "chuyen-ve-nuoc-my",
+      "title": "Chuyện về nước Mỹ",
+      "date": "2025-01-15",
+      "author": "You",
+      "summary": "Một chuyến đi Mỹ: từ định kiến đến Airbnb ngoại ô, khách sạn năm sao, New York, New Orleans, Florida—và cái nhìn dịu lại.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/chuyen-ve-nuoc-my.md",
+      "tags": ["Mỹ", "du ký", "suy ngẫm"]
+    },
+    {
+      "id": "noi-thit-kho-va-tet",
+      "title": "Nồi thịt kho và Tết",
+      "date": "2025-01-19",
+      "author": "You",
+      "summary": "Nhớ Tết xưa qua nồi thịt kho, bánh chưng, và căn bếp có PID; năm nay chọn giản tiện.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/noi-thit-kho-va-tet.md",
+      "tags": ["Tết", "ẩm thực", "hồi ký"]
+    },
+    {
       "id": "chuyen-chep-o-hy-lap",
       "title": "Chuyện chép ở Hy Lạp",
       "date": "2025-01-23",
