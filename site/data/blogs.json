@@ -19,6 +19,16 @@
       "contentUrl": "content/vung-tau-co-gi-vui.md",
       "tags": ["Vũng Tàu", "Hồ Tràm", "hồi ký"]
     },
+    {
+      "id": "the-domino-pizza-dance",
+      "title": "The Domino Pizza Dance",
+      "date": "2025-04-13",
+      "author": "You",
+      "summary": "Watching a Domino’s pizzaiolo turns lunch into a reflection on work as performance in an age of AI.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/the-domino-pizza-dance.md",
+      "tags": ["ritual", "observation", "work", "AI"]
+    },
     
     {
       "id": "nativity-play-mohamed-shahela",
