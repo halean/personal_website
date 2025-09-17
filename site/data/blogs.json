@@ -20,6 +20,16 @@
       "tags": ["Vũng Tàu", "Hồ Tràm", "hồi ký"]
     },
     {
+      "id": "what-the-birds-think-of-my-garden",
+      "title": "What the Birds Think of My Garden",
+      "date": "2025-04-17",
+      "author": "You",
+      "summary": "A small walled garden becomes a canteen and bath for birds—watching them splash, feed, and flock leads to a simple belief: perhaps they love the place.",
+      "hero": "../assets/images/placeholder.svg",
+      "contentUrl": "content/what-the-birds-think-of-my-garden.md",
+      "tags": ["birds", "garden", "observation"]
+    },
+    {
       "id": "the-domino-pizza-dance",
       "title": "The Domino Pizza Dance",
       "date": "2025-04-13",
